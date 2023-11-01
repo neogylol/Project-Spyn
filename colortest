@@ -6,25 +6,22 @@ j=0;
 
 
     if col == 2 %blue
-        while k<=1
+        
         brick.playTone(100, 500, 100);
-pause(0.5)
-k=k+1;
+pause(0.1)
+
         end
     end
 
 
  if col == 3 %green
-     while j<=2
+     
         brick.playTone(100, 500, 100);
-pause(0.5);
-j=j+1;
-     end   
+pause(0.1);   
  end
 
 
 
-end
 
 
 

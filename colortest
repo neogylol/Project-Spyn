@@ -1,25 +1,31 @@
+brick.SetColorMode(2,2);
+col= brick.ColorCode(2);
 while 1
 k=0;
 j=0;
 
 
-    if color == 2 %blue
+    if col == 2 %blue
         while k<=1
         brick.playTone(100, 500, 100);
-pause(0.5);
+pause(0.5)
 k=k+1;
         end
     end
 
 
- if color == 3 %green
-        while j<=2
+ if col == 3 %green
+     while j<=2
         brick.playTone(100, 500, 100);
 pause(0.5);
 j=j+1;
-        end
+     end   
  end
 
 
 
 end
+
+
+
+

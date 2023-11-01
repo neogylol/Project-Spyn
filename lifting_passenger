@@ -1,0 +1,33 @@
+global key
+InitKeyboard();
+while 1
+
+pause(0.1);
+    switch key
+
+          
+case 'w'
+            %disp('Crane Up');
+            brick.MoveMotor('C', -40);
+             brick.StopAllMotors;
+             brick.MoveMotor('C', -40);
+             brick.StopAllMotors;
+             brick.MoveMotor('C', -40);
+             brick.StopAllMotors;
+
+        case 's'
+            %disp('Crane Down');
+            brick.MoveMotor('C', 40);
+             brick.StopAllMotors;
+            brick.MoveMotor('C', 40);
+             brick.StopAllMotors;
+             brick.MoveMotor('C', 40);
+             brick.StopAllMotors;
+        case 'e'
+            brick.StopAllMotors;
+
+             case 'q'
+            brick.StopAllMotors;
+            break;
+    end
+end

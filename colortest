@@ -1,33 +1,24 @@
 while 1
 k=0;
 j=0;
-if color == 5  %red
-    brick.StopAllMotors;
-    pause(1);
-        brick.MoveMotor('A', 60);
-    brick.MoveMotor('D', 60);
 
-    elseif color == 2 %blue
+
+    if color == 2 %blue
         while k<=1
-        brick.playTone(100);
+        brick.playTone(100, 500, 100);
 pause(0.5);
 k=k+1;
-end
+        end
+    end
 
- elseif color == 3 %green
+
+ if color == 3 %green
         while j<=2
-        brick.playTone(100);
+        brick.playTone(100, 500, 100);
 pause(0.5);
 j=j+1;
-end
-
-
-end
-
-
-
-
-
+        end
+ end
 
 
 

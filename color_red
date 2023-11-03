@@ -1,0 +1,21 @@
+brick.SetColorMode(2,2);
+
+while 1 %%1st infinite loop
+    
+
+    %variables
+color = brick.ColorCode(2);
+ 
+
+%Moves Forward
+brick.MoveMotor('A', 50);
+    brick.MoveMotor('D', 46.5);
+
+      if color==5 %red
+
+            brick.StopAllMotors;
+            pause(1);
+            brick.MoveMotor('A', 50);
+    brick.MoveMotor('D', 46.5);
+      end
+end

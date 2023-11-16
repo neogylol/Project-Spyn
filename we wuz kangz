@@ -1,0 +1,96 @@
+brick.SetColorMode(2,2);
+
+while 1
+     touch = brick.TouchPressed(1);
+color = brick.ColorCode(2);
+touch2=brick.TouchPressed(3);
+ distance = brick.UltrasonicDist(4);
+
+ brick.MoveMotor('A', 50);   
+    brick.MoveMotor('D', 47.9);
+
+    if color == 2
+             j=1;
+               brick.StopAllMotors;
+               pause(2);
+                
+
+   run("Keyboard_Control_EV3.m");
+
+    end
+
+    if color == 4
+             z=1;                               
+               brick.StopAllMotors;
+               pause(2);
+                
+
+   run("Keyboard_Control_EV3.m");
+    end
+
+    
+    if distance > 50
+        pause(0.5)
+               brick.StopAllMotors;
+              
+               brick.MoveMotor('D', 67.2);
+               pause(0.713);
+               brick.StopAllMotors; 
+               pause(0.5);
+               brick.MoveMotor('A', 50);   
+               brick.MoveMotor('D', 47.9);
+               pause(1.5);
+    end
+
+
+           if color==5 %red
+
+            brick.StopAllMotors;
+            pause(4);
+            
+                brick.MoveMotor('A', 50);
+    brick.MoveMotor('D', 47.9);
+           end
+
+
+
+    if touch || touch2 
+        
+        while touch || touch2 
+            pause(1);
+            brick.StopAllMotors;
+            pause(1);
+
+            brick.MoveMotor('A', -50);
+
+            brick.MoveMotor('D', -47.9);
+
+            pause(1);
+
+          touch=0; 
+          touch2=0;
+
+           if distance > 50
+               brick.StopAllMotors;
+               brick.MoveMotor('D', 67.5);                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                
+               pause(0.72);
+               brick.StopAllMotors;
+                brick.MoveMotor('A', 50);   
+    brick.MoveMotor('D', 47.9);
+    pause(0.5);
+
+              
+
+           end
+
+              if distance < 50
+        brick.StopAllMotors;
+        brick.MoveMotor('A', 75.9);
+         pause(0.57);
+         brick.StopAllMotors;
+         pause(1);
+              end
+        end
+    end
+
+end
